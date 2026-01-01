@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin access</title>
+</head>
+<body>
+   
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+
+<button onclick="checkAccess()">
+    Click me to check access
+</button>
+
+    <script>
+let name=prompt("Enter your name:");
+let age=parseInt(prompt("Enter your age:"));
+ let user={name,age}
+ 
+
+  let accessGranted = (age>=18)? "Access Granted" : "Access Denied";
+  console.log(accessGranted);
+ 
+function checkAccess()
+{if (age>=18)
+   document.getElementById("1").innerHTML="Access Granted";
+   else
+   document.getElementById("2").innerHTML="Access Denied";  
+}
+if("age" in user)
+{document.getElementById("3").innerHTML+=" Age property exists in user object"; }
+  delete user.age;
+  {document.getElementById("4").innerHTML+=" Age property deleted from user object"; }
+
+    </script>
+</body>
+</html>
