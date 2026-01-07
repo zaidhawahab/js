@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let book={title:"The Alchemist",author:"Paulo Coelho",year:1988,
+       getSummary: function (){console.log("The book "+book.title+" was written by "+book.author+" in "+book.year)}
+}
+
+book.getSummary();
+//Write a function called printBookSummary(bookObj) that takes the book object as a parameter and displays the book summary using the method.
+
+function printBookSummary (book)
+  {console.log(book.getSummary())}
+printBookSummary(book.getSummary)
+
+    </script>
+</body>
+</html>
