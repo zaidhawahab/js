@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+<body>
+    <script>
+
+var feedback=' I loved the FOOD and the service! '
+console.log(`The original sentence = ${feedback}`)
+
+var a=feedback.trim();
+console.log(`The sentence after trimming is :${a}`)
+var b=feedback.toLowerCase()
+console.log(`The sentence after converting to lowercase is :${b}`)
+
+var c=feedback.replace(/food/gi,'ambience')
+console.log(`If the word 'food' is replaced with 'ambience',the sentence becomes: ${c}`)
+
+var d=feedback.indexOf("service");
+console.log(`The position of 'service' is:${d}`)
+console.log(feedback.length)
+
+var arr=feedback.split(" ");
+console.log(`The string when converted to array becomes: ${arr}`)
+console.log(`${arr.length}`)
+
+
+
+
+
+
+    </script>
+       
+</body>
+</html>
