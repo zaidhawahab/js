@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FrontEndExamJS</title>
+</head>
+<body>
+	<h2>CALCULATOR</h2>
+<label>Enter first number:</label>
+<input type="number" name="number1" id="num1"><br><br>
+<label>Enter second number:</label>
+<input type="number" name="number2" id="num2"><br><br>
+<label>Select the operation:</label>
+<select placeholder="Operation" id="operation">
+	<option>+</option>
+	<option>-</option>
+	<option>*</option>
+	<option>/</option>
+</select><br><br>
+
+<label>RESULT</label>
+<button onclick="calculate()">=</button>
+<p id="demo"></p>
+<p id="null"></p>
+
+
+
+<script>
+
+var result;
+
+function calculate() {
+
+let x=Number(document.getElementById('num1').value);
+let y=Number(document.getElementById('num2').value);
+let z=document.getElementById('operation').value;
+
+	
+switch(z)
+{
+case"+":
+	result= x+y
+	break;
+
+case"-":
+	result= x-y
+	break;
+
+case"*":
+	result= x*y
+	break;
+
+case"/":
+	if(y==0)
+		{result='Cannot divide by zero'}
+	else
+   {result=x/y}
+    break;
+
+default:
+	console.log("Invalid character")
+	break;
+
+	
+
+}
+document.getElementById('demo').innerHTML=` ${result}`
+console.log(`The result is ${result}`)
+}
+
+
+
+
+</script>
+</body>
+</html>
